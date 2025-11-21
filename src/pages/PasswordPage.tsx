@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
+import PageTransition from "@/components/PageTransition";
 
 const PasswordPage = () => {
   const [password, setPassword] = useState("");
@@ -21,7 +22,8 @@ const PasswordPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4">
+    <PageTransition>
+      <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-6">
           <img 
@@ -56,6 +58,7 @@ const PasswordPage = () => {
         </form>
       </div>
     </div>
+    </PageTransition>
   );
 };
 
