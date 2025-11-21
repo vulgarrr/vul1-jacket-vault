@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PasswordPage from "./pages/PasswordPage";
+import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import ThankYouPage from "./pages/ThankYouPage";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -19,6 +20,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<PasswordPage />} />
+          <Route 
+            path="/home" 
+            element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            } 
+          />
           <Route 
             path="/shop" 
             element={

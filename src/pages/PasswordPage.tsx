@@ -13,7 +13,7 @@ const PasswordPage = () => {
     e.preventDefault();
     if (password === "vul1") {
       sessionStorage.setItem("authenticated", "true");
-      navigate("/shop");
+      navigate("/home");
     } else {
       toast.error("Incorrect password");
       setPassword("");

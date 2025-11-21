@@ -26,9 +26,6 @@ const ShopPage = () => {
     region: "",
   });
 
-  const scrollToProduct = () => {
-    document.getElementById("product")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -77,31 +74,8 @@ const ShopPage = () => {
         </div>
       </header>
 
-      {/* Video Hero */}
-      <section className="relative h-screen w-full overflow-hidden mt-16">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative h-full flex items-center justify-center">
-          <Button
-            onClick={scrollToProduct}
-            size="lg"
-            className="h-16 px-12 bg-background text-foreground hover:bg-background/90 font-black text-xl tracking-widest"
-          >
-            SHOP NOW
-          </Button>
-        </div>
-      </section>
-
       {/* Product Section */}
-      <section id="product" className="py-20 px-4">
+      <section className="py-20 px-4 mt-16">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Product Image */}
