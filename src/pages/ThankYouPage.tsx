@@ -2,12 +2,14 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import logo from "@/assets/logo.png";
+import PageTransition from "@/components/PageTransition";
 
 const ThankYouPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4">
+    <PageTransition>
+      <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center space-y-8">
         <img 
           src={logo} 
@@ -45,6 +47,7 @@ const ThankYouPage = () => {
         </Button>
       </div>
     </div>
+    </PageTransition>
   );
 };
 
